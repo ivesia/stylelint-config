@@ -1,7 +1,7 @@
 /**
  * Limit language features
  */
-module.exports = {
+export = {
     "rules": {
         /**
          * 禁止使用命名的颜色
@@ -17,9 +17,9 @@ module.exports = {
 
         /**
          * 函数黑名单
-         * @see https://stylelint.io/user-guide/rules/function-blacklist/
+         * @see https://stylelint.io/user-guide/rules/function-disallowed-list/
          */
-        "function-blacklist": [],
+        "function-disallowed-list": [],
 
         /**
          * 禁止使用相对协议的链接
@@ -29,21 +29,21 @@ module.exports = {
 
         /**
          * URL 资源协议黑名单
-         * @see https://stylelint.io/user-guide/rules/function-url-scheme-blacklist/
+         * @see https://stylelint.io/user-guide/rules/function-url-scheme-disallowed-list/
          */
-        "function-url-scheme-blacklist": ["ftp"],
+        "function-url-scheme-disallowed-list": ["ftp"],
 
         /**
          * URL 资源协议白名单
-         * @see https://stylelint.io/user-guide/rules/function-url-scheme-whitelist/
+         * @see https://stylelint.io/user-guide/rules/function-url-scheme-allowed-list/
          */
-        "function-url-scheme-whitelist": ["http", "https", "data"],
+        "function-url-scheme-allowed-list": ["http", "https", "data"],
 
         /**
          * 函数白名单
-         * @see https://stylelint.io/user-guide/rules/function-whitelist/
+         * @see https://stylelint.io/user-guide/rules/function-allowed-list/
          */
-        // "function-whitelist": [],
+        // "function-allowed-list": [],
 
         /**
          * keyframes 名称正则
@@ -65,15 +65,15 @@ module.exports = {
 
         /**
          * 单位黑名单
-         * @see https://stylelint.io/user-guide/rules/unit-blacklist/
+         * @see https://stylelint.io/user-guide/rules/unit-disallowed-list/
          */
-        "unit-blacklist": [],
+        "unit-disallowed-list": [],
 
         /**
          * 单位白名单
-         * @see https://stylelint.io/user-guide/rules/unit-whitelist/
+         * @see https://stylelint.io/user-guide/rules/unit-allowed-list/
          */
-        // "unit-whitelist": [],
+        // "unit-allowed-list": [],
 
         /**
          * 禁止在简写属性中使用冗余值
@@ -85,7 +85,7 @@ module.exports = {
          * 禁止值带有浏览器前缀
          * @see https://stylelint.io/user-guide/rules/value-no-vendor-prefix/
          */
-        "value-no-vendor-prefix": true,
+        "value-no-vendor-prefix": [true, {ignoreValues: ["box", "optimize-contrast"]}],
 
         /**
          * 自定义属性的匹配模式
@@ -95,21 +95,21 @@ module.exports = {
 
         /**
          * 属性黑名单
-         * @see https://stylelint.io/user-guide/rules/property-blacklist/
+         * @see https://stylelint.io/user-guide/rules/property-disallowed-list/
          */
-        "property-blacklist": [],
+        "property-disallowed-list": [],
 
         /**
          * 禁止属性带有浏览器前缀
          * @see https://stylelint.io/user-guide/rules/property-no-vendor-prefix/
          */
-        "property-no-vendor-prefix": true,
+        "property-no-vendor-prefix": [true, {ignoreProperties: ["mask", "box-orient"]}],
 
         /**
          * 属性白名单
-         * @see https://stylelint.io/user-guide/rules/property-whitelist/
+         * @see https://stylelint.io/user-guide/rules/property-allowed-list/
          */
-        // "property-whitelist": [],
+        // "property-allowed-list": [],
 
         /**
          * 禁止使用可以缩写却不缩写的属性
@@ -125,27 +125,27 @@ module.exports = {
 
         /**
          * 声明中使用的属性-单位黑名单
-         * @see https://stylelint.io/user-guide/rules/declaration-property-unit-blacklist/
+         * @see https://stylelint.io/user-guide/rules/declaration-property-unit-disallowed-list/
          */
-        "declaration-property-unit-blacklist": {},
+        "declaration-property-unit-disallowed-list": {},
 
         /**
          * 声明中使用的属性-单位白名单
-         * @see https://stylelint.io/user-guide/rules/declaration-property-unit-whitelist/
+         * @see https://stylelint.io/user-guide/rules/declaration-property-unit-allowed-list/
          */
-        // "declaration-property-unit-whitelist": [],
+        // "declaration-property-unit-allowed-list": [],
 
         /**
          * 声明中使用的属性-值黑名单
-         * @see https://stylelint.io/user-guide/rules/declaration-property-value-blacklist/
+         * @see https://stylelint.io/user-guide/rules/declaration-property-value-disallowed-list/
          */
-        "declaration-property-value-blacklist": {},
+        "declaration-property-value-disallowed-list": {},
 
         /**
          * 声明中使用的属性-值白名单
-         * @see https://stylelint.io/user-guide/rules/declaration-property-value-whitelist/
+         * @see https://stylelint.io/user-guide/rules/declaration-property-value-allowed-list/
          */
-        // "declaration-property-value-whitelist": [],
+        // "declaration-property-value-allowed-list": [],
 
         /**
          * 单行声明块中声明的数量
@@ -155,15 +155,15 @@ module.exports = {
 
         /**
          * attribute 选择器操作符黑名单
-         * @see https://stylelint.io/user-guide/rules/selector-attribute-operator-blacklist/
+         * @see https://stylelint.io/user-guide/rules/selector-attribute-operator-disallowed-list/
          */
-        "selector-attribute-operator-blacklist": [],
+        "selector-attribute-operator-disallowed-list": [],
 
         /**
          * attribute 选择器操作符白名单
-         * @see https://stylelint.io/user-guide/rules/selector-attribute-operator-whitelist/
+         * @see https://stylelint.io/user-guide/rules/selector-attribute-operator-allowed-list/
          */
-        // "selector-attribute-operator-whitelist": [],
+        // "selector-attribute-operator-allowed-list": [],
 
         /**
          * 类选择器匹配模式
@@ -173,15 +173,15 @@ module.exports = {
 
         /**
          * 关系选择器黑名单
-         * @see https://stylelint.io/user-guide/rules/selector-combinator-blacklist/
+         * @see https://stylelint.io/user-guide/rules/selector-combinator-disallowed-list/
          */
-        "selector-combinator-blacklist": [],
+        "selector-combinator-disallowed-list": [],
 
         /**
          * 关系选择器白名单
-         * @see https://stylelint.io/user-guide/rules/selector-combinator-whitelist/
+         * @see https://stylelint.io/user-guide/rules/selector-combinator-allowed-list/
          */
-        // "selector-combinator-whitelist": [],
+        // "selector-combinator-allowed-list": [],
 
         /**
          * ID 选择器匹配模式
@@ -269,33 +269,33 @@ module.exports = {
 
         /**
          * 伪类选择器黑名单
-         * @see https://stylelint.io/user-guide/rules/selector-pseudo-class-blacklist/
+         * @see https://stylelint.io/user-guide/rules/selector-pseudo-class-disallowed-list/
          */
-        "selector-pseudo-class-blacklist": [],
+        "selector-pseudo-class-disallowed-list": [],
 
         /**
          * 伪类选择器白名单
-         * @see https://stylelint.io/user-guide/rules/selector-pseudo-class-whitelist/
+         * @see https://stylelint.io/user-guide/rules/selector-pseudo-class-allowed-list/
          */
-        // "selector-pseudo-class-whitelist": [],
+        // "selector-pseudo-class-allowed-list": [],
 
         /**
          * 伪元素选择器黑名单
-         * @see https://stylelint.io/user-guide/rules/selector-pseudo-element-blacklist/
+         * @see https://stylelint.io/user-guide/rules/selector-pseudo-element-disallowed-list/
          */
-        "selector-pseudo-element-blacklist": [],
+        "selector-pseudo-element-disallowed-list": [],
 
         /**
          * 伪元素选择器白名单
-         * @see https://stylelint.io/user-guide/rules/selector-pseudo-element-whitelist/
+         * @see https://stylelint.io/user-guide/rules/selector-pseudo-element-allowed-list/
          */
-        // "selector-pseudo-element-whitelist": [],
+        // "selector-pseudo-element-allowed-list": [],
 
         /**
          * 媒体查询特性名称黑名单
-         * @see https://stylelint.io/user-guide/rules/media-feature-name-blacklist/
+         * @see https://stylelint.io/user-guide/rules/media-feature-name-disallowed-list/
          */
-        "media-feature-name-blacklist": [],
+        "media-feature-name-disallowed-list": [],
 
         /**
          * 禁止媒体查询特性名称带有浏览器前缀
@@ -305,15 +305,15 @@ module.exports = {
 
         /**
          * 媒体查询特性值白名单
-         * @see https://stylelint.io/user-guide/rules/media-feature-name-value-whitelist/
+         * @see https://stylelint.io/user-guide/rules/media-feature-name-value-allowed-list/
          */
-        // "media-feature-name-value-whitelist": [],
+        // "media-feature-name-value-allowed-list": [],
 
         /**
          * 媒体查询特性名称白名单
-         * @see https://stylelint.io/user-guide/rules/media-feature-name-whitelist/
+         * @see https://stylelint.io/user-guide/rules/media-feature-name-allowed-list/
          */
-        // "media-feature-name-whitelist": [],
+        // "media-feature-name-allowed-list": [],
 
         /**
          * 媒体查询名称匹配模式
@@ -323,9 +323,9 @@ module.exports = {
 
         /**
          * at 规则黑名单
-         * @see https://stylelint.io/user-guide/rules/at-rule-blacklist/
+         * @see https://stylelint.io/user-guide/rules/at-rule-disallowed-list/
          */
-        "at-rule-blacklist": [],
+        "at-rule-disallowed-list": [],
 
         /**
          * 禁止 at 规则带有浏览器前缀
@@ -335,23 +335,23 @@ module.exports = {
 
         /**
          * at 规则必要属性
-         * @see https://stylelint.io/user-guide/rules/at-rule-property-requirelist/
+         * @see https://stylelint.io/user-guide/rules/at-rule-property-required-list/
          */
-        "at-rule-property-requirelist": {
+        "at-rule-property-required-list": {
             "font-face": ["font-family", "font-style"]
         },
 
         /**
          * at 规则白名单
-         * @see https://stylelint.io/user-guide/rules/at-rule-whitelist/
+         * @see https://stylelint.io/user-guide/rules/at-rule-allowed-list/
          */
-        // "at-rule-whitelist": [],
+        // "at-rule-allowed-list": [],
 
         /**
          * 注释词语黑名单
-         * @see https://stylelint.io/user-guide/rules/comment-word-blacklist/
+         * @see https://stylelint.io/user-guide/rules/comment-word-disallowed-list/
          */
-        "comment-word-blacklist": [],
+        "comment-word-disallowed-list": [],
 
         /**
          * 允许嵌套的深度

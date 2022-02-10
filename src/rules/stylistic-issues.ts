@@ -2,7 +2,7 @@
  * Stylistic issues
  */
 
-module.exports = {
+export = {
     "rules": {
         /**
          * 十六进制颜色大写
@@ -158,7 +158,7 @@ module.exports = {
          * 在自定义属性前添加空行
          * @see https://stylelint.io/user-guide/rules/custom-property-empty-line-before/
          */
-        "custom-property-empty-line-before": "always",
+        "custom-property-empty-line-before": "never",
 
         /**
          * 属性大小写

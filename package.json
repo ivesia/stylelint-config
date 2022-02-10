@@ -1,18 +1,44 @@
 {
   "name": "@alphatr/stylelint-config",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "2.0.0",
+  "description": "StyleLint Rules for AlphaTr",
+  "author": {
+    "name": "AlphaTr",
+    "email": "alphatr@alphatr.com"
   },
-  "author": "",
-  "license": "MIT",
-  "peerDependencies": {
-    "stylelint": "~10.1.0"
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "type": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc -d -p tsconfig.json",
+    "lint": "eslint ./src --ext .js,.ts"
   },
   "devDependencies": {
-    "@alphatr/eslint-config-base": "^2.1.0",
-    "eslint": "~5.16.0"
-  }
+    "@alphatr/eslint-config-base": "^2.2.0",
+    "@alphatr/eslint-config-typescript": "^1.0.0",
+    "@types/node": "*",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^8.8.0",
+    "typescript": "^4.5.5"
+  },
+  "peerDependencies": {
+    "stylelint": ">= 13.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivesia/stylelint-config.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "readmeFilename": "readme.md",
+  "license": "MIT"
 }

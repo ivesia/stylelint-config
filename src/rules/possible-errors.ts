@@ -1,7 +1,7 @@
 /**
  * Possible errors
  */
-module.exports = {
+export = {
     "rules": {
         /**
          * 禁止使用无效的十六进制颜色
@@ -20,12 +20,6 @@ module.exports = {
          * @see https://stylelint.io/user-guide/rules/font-family-no-missing-generic-family-keyword/
          */
         "font-family-no-missing-generic-family-keyword": true,
-
-        /**
-         * 禁止在 calc 函数内使用无效的表达式
-         * @see https://stylelint.io/user-guide/rules/function-calc-no-invalid/
-         */
-        "function-calc-no-invalid": true,
 
         /**
          * 禁止在 calc 函数内使用不加空格的操作符
@@ -55,7 +49,7 @@ module.exports = {
          * 禁止使用未知属性
          * @see https://stylelint.io/user-guide/rules/property-no-unknown/
          */
-        "property-no-unknown": true,
+        "property-no-unknown": [true, {ignoreProperties: ["box-orient"]}],
 
         /**
          * 禁止在 keyframe 声明中使用 !important
