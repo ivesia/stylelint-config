@@ -205,7 +205,7 @@ export = {
          * 关系选择器最大个数
          * @see https://stylelint.io/user-guide/rules/selector-max-combinators/
          */
-        "selector-max-combinators": 3,
+        "selector-max-combinators": 8,
 
         /**
          * 选择器最大层数

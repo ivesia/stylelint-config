@@ -452,7 +452,7 @@ export = {
          * at 规则之前有空行
          * @see https://stylelint.io/user-guide/rules/at-rule-empty-line-before/
          */
-        "at-rule-empty-line-before": "always",
+        "at-rule-empty-line-before": null,
 
         /**
          * at 规则的大小写
@@ -500,7 +500,7 @@ export = {
          * 缩进
          * @see https://stylelint.io/user-guide/rules/indentation/
          */
-        "indentation": 4,
+        "indentation": [4, {baseIndentLevel: 0}],
 
         /**
          * 换行符
@@ -512,7 +512,7 @@ export = {
          * 空行数量
          * @see https://stylelint.io/user-guide/rules/max-empty-lines/
          */
-        "max-empty-lines": 2,
+        "max-empty-lines": 1,
 
         /**
          * 一行的最大字数
